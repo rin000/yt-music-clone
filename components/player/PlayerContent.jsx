@@ -49,9 +49,9 @@ const PlayerContent = () => {
   }, [controls, nextPlayerQueue, playNext]);
 
   useEffect(() => {
-    ref?.current?.addEventListener('ended', onEventFinish);
+    ref?.current?.addEventListener('ended', onClickNextBtn);
     return () => {
-      ref?.current?.removeEventListener('ended', onEventFinish);
+      ref?.current?.removeEventListener('ended', onClickNextBtn);
     };
   }, [ref, onClickNextBtn]);
 
